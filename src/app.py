@@ -66,6 +66,10 @@ col1.title("💬 Bank FAQs Chatbot")
 if col2.button("🗑️"):
     st.session_state.chat_history = []
 
+if __name__ == "__main__":
+    import subprocess
+    subprocess.run(["streamlit", "run", "app.py", "--server.port", str(port), "--server.enableCORS", "false"])
+
 # Initialize chat history
 if "chat_history" not in st.session_state:
     st.session_state.chat_history = []
