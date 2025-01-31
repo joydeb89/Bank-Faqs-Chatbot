@@ -52,6 +52,6 @@ jobs:
           docker push ${{ secrets.DOCKER_HUB_USERNAME }}/chatbot:latest
 
       # Step 8: Deploy to a cloud platform (e.g., AWS ECS, Heroku, etc.)
-      - name: Deploy to Heroku
+      - name: Deploy to Render
         run: |
           echo "Add your deployment commands here"
