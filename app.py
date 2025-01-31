@@ -3,6 +3,10 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 import streamlit as st
 
+# Example of using os module
+current_directory = os.getcwd()
+print(f"Current working directory: {current_directory}")
+
 port = int(os.getenv("PORT", 8501))
 
 # Load the FAQ dataset
