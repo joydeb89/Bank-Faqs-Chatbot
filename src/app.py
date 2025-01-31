@@ -69,8 +69,8 @@ if col2.button("🗑️"):
     st.session_state.chat_history = []
 
 if __name__ == "__main__":
-    import subprocess
-    subprocess.run(["streamlit", "run", "app.py", "--server.port", str(port), "--server.enableCORS", "false"])
+    # Run Streamlit with the dynamically assigned port
+    st.run(host="0.0.0.0", port=port)
 
 # Initialize chat history
 if "chat_history" not in st.session_state:
