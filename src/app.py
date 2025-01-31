@@ -3,6 +3,8 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 import streamlit as st
 
+port = int(os.getenv("PORT", 8501))
+
 # Load the FAQ dataset
 faq_data = pd.read_csv("BankFAQs.csv")
 
