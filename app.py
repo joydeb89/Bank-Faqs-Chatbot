@@ -4,8 +4,12 @@ from sklearn.metrics.pairwise import cosine_similarity
 import streamlit as st
 
 # Example of using os module
+import os
+
+# Get the current working directory
 current_directory = os.getcwd()
-print(f"Current working directory: {current_directory}")
+print("Current working directory:", current_directory)
+
 
 port = int(os.getenv("PORT", 8501))
 
@@ -74,7 +78,8 @@ if col2.button("🗑️"):
 
 if __name__ == "__main__":
     # Run Streamlit with the dynamically assigned port
-    st.run(host="0.0.0.0", port=port)
+    #st.run(host="0.0.0.0", port=port)
+    pass
 
 # Initialize chat history
 if "chat_history" not in st.session_state:
